@@ -1,0 +1,7 @@
+C:\Build\InFilesFinder\InFilesFinder\bin\Release\InFilesFinder.exe.config
+C:\Build\InFilesFinder\InFilesFinder\bin\Release\InFilesFinder.exe
+C:\Build\InFilesFinder\InFilesFinder\bin\Release\InFilesFinder.pdb
+C:\Build\InFilesFinder\InFilesFinder\obj\Release\InFilesFinder.FormMain.resources
+C:\Build\InFilesFinder\InFilesFinder\obj\Release\InFilesFinder.csproj.GenerateResource.Cache
+C:\Build\InFilesFinder\InFilesFinder\obj\Release\InFilesFinder.exe
+C:\Build\InFilesFinder\InFilesFinder\obj\Release\InFilesFinder.pdb
