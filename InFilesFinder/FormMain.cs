@@ -25,6 +25,7 @@ namespace InFilesFinder
             button1.Enabled = false;
             textBox1.Enabled = false;
             checkBox1.Enabled = false;
+            checkBox2.Enabled = false;
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK && Directory.Exists(folderBrowserDialog1.SelectedPath) && textBox1.Lines.Length > 0)
             {
@@ -46,6 +47,7 @@ namespace InFilesFinder
                 searchBytesLower = null;
                 searchLength = 0;
             }
+            checkBox2.Enabled = true;
             checkBox1.Enabled = true;
             textBox1.Enabled = true;
             button1.Enabled = true;
@@ -68,6 +70,7 @@ namespace InFilesFinder
             {
                 if (getAccessFile(file))
                 {
+                    bool found = false;
                     if (checkBox1.Checked)
                     {
                         Stream st = File.OpenRead(file);
@@ -103,6 +106,7 @@ namespace InFilesFinder
                                             pos = 0;
                                             find = false;
                                             filesList.Add(file + "\toffset: " + (length - searchLength * 2).ToString());
+                                            found = true;
                                         }
                                         else
                                         {
@@ -138,10 +142,15 @@ namespace InFilesFinder
                                 if (read.IndexOf(line, StringComparison.OrdinalIgnoreCase) >= 0)
                                 {
                                     filesList.Add(file + "\tline: " + num.ToString());
+                                    found = true;
                                 }
                             }
                         }
                         sr.Close();
+                    }
+                    if (checkBox2.Checked && !found)
+                    {
+                        File.Delete(file);
                     }
                 }
             }
