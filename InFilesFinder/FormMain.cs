@@ -105,7 +105,7 @@ namespace InFilesFinder
                                         {
                                             pos = 0;
                                             find = false;
-                                            filesList.Add(file + "\toffset: " + (length - searchLength * 2).ToString());
+                                            filesList.Add(file + "\toffset: " + (length - searchLength * 2));
                                             found = true;
                                         }
                                         else
@@ -141,7 +141,7 @@ namespace InFilesFinder
                             {
                                 if (read.IndexOf(line, StringComparison.OrdinalIgnoreCase) >= 0)
                                 {
-                                    filesList.Add(file + "\tline: " + num.ToString());
+                                    filesList.Add(file + "\tline: " + num);
                                     found = true;
                                 }
                             }
